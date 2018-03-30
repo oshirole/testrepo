@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 Mar, 2018, 1:58:07 PM
+    Author     : omkar
+*/
+
+.search-field{border:#40c4db 1px solid;border-radius:0px;padding:7px 35px;font-size:16px;margin-bottom:10px;color:#000 !important;width:100%;}
+.search-field:focus{border-color:#40c4db;}
+.ui-autocomplete{position:absolute;z-index:1000;cursor:default;padding:0;margin-top:2px;list-style:none;background-color:#ffffff;border:1px solid #40c4db;width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;/*max-height:200px;overflow-y:scroll;*/}
+.ui-autocomplete > li{padding:3px 20px;border-bottom:rgba(64, 196, 219, 0.45) 1px solid;}
+.ui-autocomplete > li.ui-state-focus{background-color:#40c4db;color:#fff;}
+.ui-helper-hidden-accessible{display:none;}
+.ui-autocomplete-category{font-weight:bold;background:#0f82c3;color:#fff;padding:0px 10px;}
