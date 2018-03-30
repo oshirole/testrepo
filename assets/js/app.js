@@ -1,4 +1,4 @@
-function loadProductSeacrh(jsondata, citydata) {
+function loadProductSeacrh(jsondata) {
     if ($("#txtProd").length) { 
         $.widget("custom.catcomplete", $.ui.autocomplete, {
             _create: function () {
@@ -68,21 +68,25 @@ function loadProductSeacrh(jsondata, citydata) {
                 response(aryResponse);
             },
             focus: function (event, ui) {
-                $("#search").val(ui.item.label);
+                //$("#search").val(ui.item.label);
                 return false;
             }
         });
-//        $("#txtcity").autocomplete({
-//            delay: 0,
-//            source: citydata,
-//            select: function (event, ui) {
+    }
+}    
+
+
+function loadSimpleAutoSearch(id,jsondata){
+        $("#"+id).autocomplete({
+            delay: 0,
+            source: jsondata,
+            select: function (event, ui) {
 //                $('#txtcity').val(ui.item.label);
 //                $('#txtcityval').val(ui.item.value);
 //                return false;
-//            },
-//            focus: function (event, ui) {
-//                return false;
-//            }
-//        });
-    }
-}    
+            },
+            focus: function (event, ui) {
+                return false;
+            }
+        });
+}
