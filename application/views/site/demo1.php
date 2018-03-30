@@ -121,7 +121,7 @@
                                         <td style="display: none;">IGST 1</td>
                                         <td>20</td>
                                         <td>Amount 1</td>
-                                        <td><i class="btn btn-danger fa fa-trash"></i></td>
+                                        <td><i class="prodRemove btn btn-danger fa fa-trash"></i></td>
                                     </tr>
                                     <tr>
                                         <td><i class="prodDetails btn btn-info fa fa-plus"></i></td>
@@ -137,7 +137,7 @@
                                         <td style="display: none;">IGST 2</td>
                                         <td>40</td>
                                         <td>Amount 2</td>
-                                        <td><i class="btn btn-danger fa fa-trash"></i></td>
+                                        <td><i class="prodRemove btn btn-danger fa fa-trash"></i></td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -210,38 +210,6 @@
     <!-- /.row (main row) -->
 
 </section>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var table = $('#cartList').DataTable();
-        $(document).on('click', '.prodDetails', function () {
-
-            if ($(this).hasClass("fa-plus"))
-            {
-                $(this).removeClass("fa-plus");
-                $(this).addClass("fa-minus");
-            } else {
-                $(this).removeClass("fa-minus");
-                $(this).addClass("fa-plus");
-            }
-
-            var tr = $(this).closest('tr');
-            $('#cartList').DataTable();
-            var row = table.row(tr);
-
-            if (row.child.isShown()) {
-                // This row is already open - close it
-                row.child.hide();
-                tr.removeClass('shown');
-            } else {
-                // Open this row
-                console.log($(this).parent().parent().children(2));
-                row.child("<tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr>").show();
-                tr.addClass('shown');
-            }
-        });
-    });
-</script>
-
 <script type="text/javascript">
     $(document).ready(function ($) {
         loadProductSeacrh([{"label": "MS Nut Bolt", "value": "1", "category": ""}, {"label": "HT Hex Bolt", "value": "2", "category": ""}]);

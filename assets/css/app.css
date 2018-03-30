@@ -15,3 +15,4 @@ and open the template in the editor.
 .ui-autocomplete > li.ui-state-focus{background-color:#40c4db;color:#fff;}
 .ui-helper-hidden-accessible{display:none;}
 .ui-autocomplete-category{font-weight:bold;background:#0f82c3;color:#fff;padding:0px 10px;}
+.prodInnerTable {width:100%;}
